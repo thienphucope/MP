@@ -1,0 +1,120 @@
+% 'draft' mode can be used to speed up compilation
+\documentclass[oneside,final]{hcmut-report}
+\usepackage{codespace}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{longtable}
+
+\usepackage{mdframed}
+
+% Define the style for your box
+\mdfdefinestyle{myboxstyle}{
+    skipabove=\topsep,
+    skipbelow=\topsep,
+    leftmargin=0pt,
+    rightmargin=0pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=false,
+    leftline=false,
+    font=\normalfont,
+    backgroundcolor=yellow!20
+}
+\newmdenv[style=myboxstyle]{mybox}
+
+
+% Draft watermark
+% https://github.com/callegar/LaTeX-draftwatermark
+
+% Encodings
+\usepackage{gensymb,textcomp}
+
+% Better tables
+% Wide tables go to https://tex.stackexchange.com/q/332902
+\usepackage{array,longtable,multicol,multirow,siunitx,tabularx}
+
+% Better enum
+\usepackage{enumitem}
+
+% Graphics
+\usepackage{caption,float}
+
+% Add options for figures, like max width, framing, etc.
+\usepackage[export]{adjustbox}
+
+% References
+% Use \Cref{} instead of \ref{}
+\usepackage[nameinlink]{cleveref}
+
+% FOR DEMONSTRATION PURPOSES, REMOVE IN PRODUCTION
+\usepackage{mwe}
+
+% Sub-preambles
+% https://github.com/MartinScharrer/standalone
+
+% Configurations
+\coursename{Course name h}
+\reporttype{Report type h}
+\title{Report title h}
+\advisor{Nguyễn Minh Tâm}
+
+% Allow page breaks inside align* environment
+%\allowdisplaybreaks{}
+
+% Makes a lot of things blue, avoid at all costs
+%\everymath{\color{blue}}
+
+% Set depth of numbering for counters
+\AtBeginDocument{\counterwithin{lstlisting}{section}}
+
+\begin{document}
+\coverpage%
+\newcounter{memberrowno}
+\setcounter{memberrowno}{0}
+
+
+
+\clearpage
+
+
+Nhóm trưởng: Hoàng Ngô Thiên Phúc - phuc.hoang1052004@hcmut.edu.vn
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{2} % Điều chỉnh độ cao của các hàng
+\begin{tabularx}{\textwidth}{|c|c|>{\centering\arraybackslash}m{2.5cm}|X|}
+\hline
+\textbf{STT} & \textbf{Họ tên SV} & \textbf{Hoàn thành công việc} & \multicolumn{1}{c|}{\textbf{Nhiệm vụ}} \\ \hline
+1 & Nguyễn Văn Thành & 100\% &  \\ \hline
+2 & Lê Hoàng Ngọc Hân  & 100\% &  \\ \hline
+3 & Đồ Đình Thiên Phúc  & 100\% &  \\ \hline
+4 & Trần Xuân Phú  & 100\% &  \\ \hline
+5 & Hoàng Ngô Thiên Phúc  & 100\% &  \\ \hline
+
+\end{tabularx}
+\end{table}
+
+
+
+
+
+
+
+
+\clearpage
+
+\tableofcontents
+
+
+
+\clearpage
+
+
+%\bibliographystyle{plain}
+%\bibliography{refs/example.bib}
+%\nocite{*}
+
+\end{document}
